@@ -1,0 +1,6 @@
+name: ema_environment
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - conda-forge::ffmpeg
