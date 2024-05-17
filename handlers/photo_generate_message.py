@@ -9,11 +9,11 @@ def photo_generate_message(openai, bot, message, is_reply=False):
         reply_message = message.reply_to_message.text
         message_for_openai = reply_message
     
-    response = openai.Image.create(
+    response = openai.images.generate(
         prompt=message_for_openai,
         n=1
     )
-    
-    image_url = response['data'][0]['url']
+    print(response);
+    image_url = response.data[0].url
     
     bot.send_photo(chat_id=message.chat.id, photo=image_url, reply_to_message_id=message.message_id)

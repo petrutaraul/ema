@@ -2,7 +2,6 @@ from conversation_starters import EMA_WITH_VOICE
 from config import BOT_VOICE
 from openai_chat_completion import openai_chat_completion
 import requests
-import json
 
 def audio_message(bot, os, subprocess, openai, detect, message, is_reply=False):
     # URL from https://github.com/rany2/edge-tts/blob/master/src/edge_tts/constants.py
@@ -23,8 +22,8 @@ def audio_message(bot, os, subprocess, openai, detect, message, is_reply=False):
 
     response = openai_chat_completion(message_for_openai, message, openai)
 
-    fileName = "Emato" + message.from_user.username + ".mp3"
-
+    fileName = "Emato" + (message.from_user.username if message.from_user.username else str(message.from_user.id)) + ".mp3"
+    
     text = response
 
     lang = detect(text)

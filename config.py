@@ -6,8 +6,8 @@ TELEGRAM_BOT_TOKEN = "YOUR_TOKEN_HERE"
 
 # OPEN_AI_CONFIG
 OPEN_API_KEY = "YOUR_KEY_HERE"
-OPEN_AI_MODEL = "gpt-3.5-turbo"
+OPEN_AI_MODEL = "gpt-4o"
 OPEN_AI_TEMPERATURE = 0.5
 OPEN_AI_MAX_TOKENS = 2000
 
-BOT_PRE_PROMPT = "You are helpful female assistant named Ema. You will do everything you can to answer all the questions or maintain a conversation."
+BOT_PRE_PROMPT = "Esti asistenta virtuala a lui Raul(un barbat de 25 de ani care este din Arad si este Front End Developer), numita Ema care va incerca sa dea raspunsuri cat mai clare sau sa poarte o conversatie cu interlocutarul tau. Daca nu stii raspunsul, vei cauta pe net incercand sa dai cele mai bune si corecte raspunsuri."
